@@ -75,6 +75,54 @@ const watchdog_IO3 = new prom.Gauge({
   ]
 });
 
+const watchdog_DewPtC = new prom.Gauge({
+  name: 'watchdog_DewPtC',
+  help: 'Dew Point C',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_DewPtF = new prom.Gauge({
+  name: 'watchdog_DewPtF',
+  help: 'Dew Point F',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext1TempC = new prom.Gauge({
+  name: 'watchdog_Ext1TempC',
+  help: 'Ext 1 Temp C',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext1TempF = new prom.Gauge({
+  name: 'watchdog_Ext1TempF',
+  help: 'Ext 1 Temp F',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext2TempC = new prom.Gauge({
+  name: 'watchdog_Ext2TempC',
+  help: 'Ext 2 Temp C',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext2TempF = new prom.Gauge({
+  name: 'watchdog_Ext2TempF',
+  help: 'Ext 2 Temp F',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
 async function getAll() {
   // Fetch XML from device
   const response = await got(process.env.WATCHDOG_PATH);
