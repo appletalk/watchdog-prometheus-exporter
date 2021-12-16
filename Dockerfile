@@ -7,7 +7,7 @@ RUN apk update && apk add --no-cache \
 
 WORKDIR /app
 
-RUN git clone https://github.com/branttaylor/watchdog-prometheus-exporter.git /app && \
+RUN git clone https://github.com/appletalk/watchdog-prometheus-exporter.git /app && \
     npm install
 
 CMD npm start
